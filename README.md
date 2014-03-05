@@ -19,17 +19,17 @@ Raspberry PI with following graphs:
 	
 - Number of open files.
 
-- Root FS Usage. SDcard space usage.
+- Root FS Usage. SD-card space usage.
 
 - Number of processes.
 	
 - Received and sent NTP packets.
 	
-- Lan hosts. Number of lan hosts.
+- Lan hosts. Number of ip hosts online.
 	
-- Round Trip Time Gateway. Time and timeout graph using ping.
+- Round Trip Time Gateway. Time and timeout graph using ping. Email when a timeout has occurred.
 
-- Round Trip Time China. Time and timeout graph using ping.
+- Round Trip Time China. Time and timeout graph using ping. Email when a timeout has occurred.
 	
 - Apache Total Accesses. Number of accesses local Apache server.
 
