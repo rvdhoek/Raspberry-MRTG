@@ -78,7 +78,7 @@ Copy following file's to /etc/mrtg.
  mrtg.cfg
  
 Step 3:
-Make changes in these 2 file's.
+Make changes in these file's.
  mrtg_ping.sh (Mail address)
  mrtg.cfg (Name and Mail address)
  raspi-1.inc (Check for correct IP addresses)
