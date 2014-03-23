@@ -38,6 +38,11 @@ Step 2a:
 Install Apache.
 
 Install MRTG.
+
+Install SNMPD
+
+http://www.satsignal.eu/raspberry-pi/monitoring.html
+and
 http://www.iceflatline.com/2009/08/how-to-install-and-configure-mrtg-on-ubuntu-server/
 
 Note: Don't use sudo cfgmaker --output=/etc/mrtg/mrtg.cfg public@your-router's-IP-address
