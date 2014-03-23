@@ -88,45 +88,45 @@ Note: Don't use sudo cfgmaker --output=/etc/mrtg/mrtg.cfg public@your-router's-I
 Step 2b:
 Copy following file's to /etc/mrtg.
 
- accesslog.bash
- count-apps.sh
- count-connections.sh
- count-proces.sh
- countpptpusers.bash
- files.pl
- getntp.pl
- GetNTP10usec.pl
- GetNTP3000usec.pl
- GetNTPmicrosec.pl
- GetNTPoffsetNs.pl
- hostcounter.bash
- linux_proc.pl
- linux_users.pl
- mrtg.pid
- mrtg_ping.sh
- ntppackets.pl
- raspi-1.inc
- raspi-2.inc
- raspi-3.inc
- raspi-4.inc
- speeddns.bash
- speedtest.bash
- stat.pl
- webstats.pl
- mrtg.cfg
+accesslog.bash
+count-apps.sh
+count-connections.sh
+count-proces.sh
+countpptpusers.bash
+files.pl
+getntp.pl
+GetNTP10usec.pl
+GetNTP3000usec.pl
+GetNTPmicrosec.pl
+GetNTPoffsetNs.pl
+hostcounter.bash
+linux_proc.pl
+linux_users.pl
+mrtg.pid
+mrtg_ping.sh
+ntppackets.pl
+raspi-1.inc
+raspi-2.inc
+raspi-3.inc
+raspi-4.inc
+speeddns.bash
+speedtest.bash
+stat.pl
+webstats.pl
+mrtg.cfg
  
 Step 3:
 Make changes in these 2 file's.
- mrtg_ping.sh (Mail address)
- mrtg.cfg (Name and Mail address)
- raspi-1.inc (Check for correct IP addresses)
- raspi-2.inc (Check for correct IP addresses)
- raspi-3.inc (Check for correct IP addresses)
+mrtg_ping.sh (Mail address)
+mrtg.cfg (Name and Mail address)
+raspi-1.inc (Check for correct IP addresses)
+raspi-2.inc (Check for correct IP addresses)
+raspi-3.inc (Check for correct IP addresses)
 
 Step 4:
 Run the following commands:
- sudo indexmaker --output=/var/www/mrtg/index.html /etc/mrtg/mrtg.cfg
- sudo /etc/init.d/mrtg restart
+sudo indexmaker --output=/var/www/mrtg/index.html /etc/mrtg/mrtg.cfg
+sudo /etc/init.d/mrtg restart
 
 
 
