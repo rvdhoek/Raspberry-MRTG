@@ -47,15 +47,15 @@ Here is a schematic representation of my local network.
 
 
 
-										|-----RASPBERRY PI 1 192.168.1.3
-										|
-										|
-										|
-INTERNET----DOCSIS MODEM------ROUTER----------LAPTOP,COMPUTER 192.168.1.0/24
-							192.168.1.1	|
-										|
-										|
-										|----RASPBERRY PI 2 192.168.1.4
+								|-----RASPBERRY PI 1 192.168.1.3
+								|
+								|
+								|
+INTERNET----DOCSIS MODEM------ROUTER------------------------LAPTOP, COMPUTER 192.168.1.0/24
+				192.168.1.1			|
+								|
+								|
+								|----RASPBERRY PI 2 192.168.1.4
 										
 
 
