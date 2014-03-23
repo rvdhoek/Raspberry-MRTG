@@ -2,6 +2,7 @@ Raspberry-MRTG
 ==============
 
 Raspberry PI with following graphs:
+(See:MRTGprintscreen.png)
 
 -Raspberry Pi 1 - CPU load
 CPU load for Raspberry.
