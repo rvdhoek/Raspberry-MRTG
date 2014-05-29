@@ -1,4 +1,4 @@
-Raspberry-MRTG
+Raspberry MRTG
 ==============
 
 Raspberry PI with following graphs:
