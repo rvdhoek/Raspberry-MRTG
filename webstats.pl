@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -l
 
 # depends on availability of status and extended status info from your
 # Apache webserver -- your httpd.conf needs to include something like the
@@ -30,9 +30,11 @@ $d1 = int($d1);
 $d2 = int($d2);
 
 if ($ARGV[0] eq "hits") {
-    print "$d1\n";
+    print "$d1";
+    print "$d1";
 } elsif ($ARGV[0] eq "bytes") {
-    print "$d2\n";
+    print "$d2";
+    print "$d2";
 }
 
 #print "$up\n";

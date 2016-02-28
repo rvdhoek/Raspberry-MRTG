@@ -1,4 +1,5 @@
 #!/bin/sh
-l=`grep ESTABLISHED /proc/net/ip_conntrack | wc -l`
+l=$(netstat -anp | grep ESTABLISHED | wc -l)
+echo $l
 echo $l
 

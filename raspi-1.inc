@@ -1,5 +1,5 @@
 #	Raspberry Pi 1 - CPU load
-Target[raspi1-CPU]: .1.3.6.1.2.1.25.3.3.1.2.768&.1.3.6.1.2.1.25.1.7.0:public@localhost
+Target[raspi1-CPU]: `bash /etc/mrtg/cpuload.sh`
 MaxBytes[raspi1-CPU]: 100
 YLegend[raspi1-CPU]: CPU %
 ShortLegend[raspi1-CPU]: %
@@ -14,14 +14,13 @@ MaxBytes2[raspi1-CPU-temp]: 100000
 kMG[raspi1-CPU-temp]: ,
 Title[raspi1-CPU-temp]: CPU temperature for Raspberry Pi 1
 Options[raspi1-CPU-temp]: integer,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noo
-YLegend[raspi1-CPU-temp]: Temperature (Celsius)
+YLegend[raspi1-CPU-temp]: Celsius
 ShortLegend[raspi1-CPU-temp]: Celsius
 Factor[raspi1-CPU-temp]: 0.001
 PageTop[raspi1-CPU-temp]: <H1>Raspberry Pi 1 -- CPU Temperature</H1>
 
 #	Raspberry Pi 1 - Memory
 
-#Target[raspi1-mem]: ((1.3.6.1.4.1.2021.4.6.0&.1.3.6.1.4.1.2021.4.6.0:public@localhost)+(1.3.6.1.4.1.2021.4.14.0&.1.3.6.1.4.1.2021.4.14.0:public@localhost)+(1.3.6.1.4.1.2021.4.15.0&.1.3.6.1.4.1.2021.4.15.0:public@localhost)) * 1024
 Target[raspi1-mem]: .1.3.6.1.2.1.25.2.3.1.6.1&.1.3.6.1.2.1.25.2.3.1.6.3:public@localhost
 MaxBytes[raspi1-mem]: 100524288
 Options[raspi1-mem]: integer,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noo
@@ -52,6 +51,26 @@ ShortLegend[localhost.users]: Users
 kMG[localhost.users]: ,
 YLegend[localhost.users]: users count 
 Options[localhost.users]: integer,nopercent,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noo
+
+# get number of current accepted users
+Target[localhost.acceptusers]: `bash /etc/mrtg/linux_acceptedusers.sh`
+Title[localhost.acceptusers]: Logged in # Accepted Users
+PageTop[localhost.acceptusers]: <H1>Number of accepted Users</H1>
+MaxBytes[localhost.acceptusers]: 100000
+ShortLegend[localhost.acceptusers]: Users
+kMG[localhost.acceptusers]: ,
+YLegend[localhost.acceptusers]: users count
+Options[localhost.acceptusers]: integer,nopercent,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noo
+
+# get number of current refused users
+Target[localhost.refusers]: `bash /etc/mrtg/linux_refusers.sh`
+Title[localhost.refusers]: Logged in # refused Users
+PageTop[localhost.refusers]: <H1>Number of refused Users</H1>
+MaxBytes[localhost.refusers]: 100000
+ShortLegend[localhost.refusers]: Users
+kMG[localhost.refusers]: ,
+YLegend[localhost.refusers]: users count
+Options[localhost.refusers]: integer,nopercent,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noo
 
 # get number of processes running
 Target[localhost.procs]: `perl /etc/mrtg/linux_proc.pl`
@@ -129,33 +148,16 @@ LegendO[count-connections]:  Connections:
 PageTop[count-connections]: <H1>Number of established ip connections</H1>
 WithPeak[count-connections]: wmy
 
-
-# NTP Packets
-Title[raspi1_ntp]: Raspberry NTP packets
-Target[raspi1_ntp]: `perl /etc/mrtg/ntppackets.pl localhost`
-PageTop[raspi1_ntp]: <H1>Received and sent NTP packets</H1>
-MaxBytes[raspi1_ntp]: 4000000000
-Factor[raspi1_ntp]: 0.001
-kMG[raspi1_ntp]: k,M,G
-Options[raspi1_ntp]: integer,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noi
-YLegend[raspi1_ntp]: Packets/s
-ShortLegend[raspi1_ntp]: packet/s
-Legend1[raspi1_ntp]: Received
-Legend2[raspi1_ntp]: Sent
-LegendI[raspi1_ntp]: Received
-LegendO[raspi1_ntp]: Sent
-WithPeak[raspi1_ntp]: wmy
-
 #  NTP offsets
 Target[raspi1_ntp-o]: `perl /etc/mrtg/getntp.pl localhost`
 MaxBytes[raspi1_ntp-o]: 100
 MaxBytes2[raspi1_ntp-o]: 200
 Unscaled[raspi1_ntp-o]: dwmy
-Title[raspi1_ntp-o]: NTP statistics for 192.168.1.3 - offset from NTP
+Title[raspi1_ntp-o]: NTP statistics for localhost - offset from NTP
 Options[raspi1_ntp-o]: integer,growright,unknaszero,nopercent,gauge,noinfo,nobanner,withzeroes,noi
 YLegend[raspi1_ntp-o]: offset+100 ms
 ShortLegend[raspi1_ntp-o]: ms
 LegendO[raspi1_ntp-o]: offset:
 Legend2[raspi1_ntp-o]: time offset in ms, with 100ms offset added to ensure it's positive!
-PageTop[raspi1_ntp-o]: <H1>NTP -- 192.168.1.3</H1>
+PageTop[raspi1_ntp-o]: <H1>NTP -- localhost</H1>
 
