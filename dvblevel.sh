@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# I have installed an Sundtek dvb-c usbstick. For measuring dvb levels.
 MC="/opt/bin/mediaclient"
 #check if symlink exists
 if [ -z "$1" ]; then
