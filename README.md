@@ -35,9 +35,8 @@ Run the following commands:
 ---------------------------
 ```
 sudo mkdir /var/www/mrtg
-```
 sudo indexmaker --output=/var/www/mrtg/index.html /etc/mrtg/mrtg.cfg
-
+```
 Open /etc/apache2/apache.conf and add the following lines in the section containing similar Directory directives:
 -----------------------------------------------------------------------------------------------------------------
 ```
