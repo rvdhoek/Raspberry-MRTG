@@ -13,7 +13,7 @@ if [ $LOSS = 100 ]; then
 {
 HOSTNAME=$(hostname)
 echo "0"
-#echo "Something wrong with the server: $1" | mail -s "Something wrong with the server: $1" ralvdhoek@gmail.com
+#echo "Something wrong with the server: $1" | mail -s "Something wrong with the server: $1" namek@gmail.com
 TODAY=$(date)
 echo "Date: $TODAY My host:$HOSTNAME IP:$1 " >> /var/log/mrtg_ping.log
 }
