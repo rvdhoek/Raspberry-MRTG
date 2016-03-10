@@ -27,7 +27,7 @@ git clone https://github.com/rvdhoek/Raspberry-MRTG
 
 ```
 cd Raspberry-MRTG
-cp -r ./Raspberry-MRTG/. /etc/mrt/.
+cp -r ./Raspberry-MRTG/. /etc/mrtg/.
 cd/etc/mrtg
 ```
 Run the following commands:
