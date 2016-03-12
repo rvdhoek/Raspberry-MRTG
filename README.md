@@ -59,7 +59,7 @@ sudo service mrtg restart
 sudo service apache2 restart
 ```
 
-If ther are problems:
+If there are problems:
 ---------------------
 ```
 --Run in the commandline: sudo env LANG=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg 
