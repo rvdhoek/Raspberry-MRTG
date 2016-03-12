@@ -9,10 +9,14 @@ First, update your package list:
 ```
 sudo apt-get update
 ```
-Then download and install MRTG:
+Then download and install MRTG and mode..:
 -------------------------------
 ```
 sudo apt-get install mrtg
+sudo apt-get install bc
+sudo apt-get install lynx
+
+
 ```
 Change directory:
 -----------------
@@ -54,3 +58,13 @@ sudo service mrtg restart
 ```
 sudo service apache2 restart
 ```
+
+If ther are problems:
+---------------------
+--Run in the commandline: sudo env LANG=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg 
+--Run the bash or perl script in the commandline. (bash testport.sh 22)
+--Search in google....
+
+
+
+
