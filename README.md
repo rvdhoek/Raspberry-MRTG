@@ -61,10 +61,11 @@ sudo service apache2 restart
 
 If ther are problems:
 ---------------------
+```
 --Run in the commandline: sudo env LANG=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg 
 --Run the bash or perl script in the commandline. (bash testport.sh 22)
 --Search in google....
-
+```
 
 
 
