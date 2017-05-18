@@ -15,8 +15,9 @@ Then download and install MRTG and mode..:
 sudo apt-get install mrtg
 sudo apt-get install bc
 sudo apt-get install lynx
-
-
+sudo apt-get install ntpdate
+sudo apt-get install jq
+sudo apt-get install tcpdump
 ```
 Change directory:
 -----------------
