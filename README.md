@@ -1,5 +1,6 @@
 # Raspberry-MRTG
 Raspberry PI with complete graphs.
+For monitoring a Raspberry PI equipped with GPS,NTP time server and some sensors.
 ---------------------------------
 ![alt tag](https://github.com/rvdhoek/Raspberry-MRTG/blob/master/Printscreen.png)
 
